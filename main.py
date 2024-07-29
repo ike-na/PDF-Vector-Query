@@ -1,8 +1,7 @@
+import os
 from langchain_community.llms import Ollama
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
-# from utilities import get_chunks, get_retriever, get_vectorstore
-import os
 from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import PromptTemplate
 from langchain.prompts import ChatPromptTemplate, PromptTemplate
@@ -10,7 +9,7 @@ from langchain.retrievers.multi_query import MultiQueryRetriever
 from langchain_community.document_loaders import UnstructuredPDFLoader
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-# from pdf_combiner import combine_pdfs
+
 
 def save_vectorstore(chunks):
   vectorstore = Chroma.from_documents(
@@ -33,10 +32,9 @@ def get_vectorstore(chunks):
     return save_vectorstore(chunks)
   
 def get_chunks(path):
-  # do here a if else to check if the file exists
+  # do here an if else to check if the file exists
   loader = UnstructuredPDFLoader(file_path=path)
   data = loader.load()
-
   text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
   chunks = text_splitter.split_documents(data)
   return chunks
@@ -50,9 +48,9 @@ def get_retriever(vectorstore, ollama):
       Original question: {question}""")
 
     retriever = MultiQueryRetriever.from_llm(
-        vectorstore.as_retriever(), 
+        vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 5}),
         ollama,
-        prompt=query_prompt
+        prompt=query_prompt 
     )
 
     template = """Answer the following question based on this context: {context}
@@ -74,7 +72,7 @@ def main():
       | StrOutputParser()
   )
 
-  question=input("Enter your question: ")
+  question = input("Enter your question: ")
 
   result = chain.invoke({"question": question})
   print(result)
