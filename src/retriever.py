@@ -17,7 +17,7 @@ def get_retriever_and_prompt(vectorstore, ollama):
         prompt=prompt_template 
     )
 
-    answer_template = """Answer the following question based on this context: {context}
+    answer_template = """Answer clearly to the following question based on this context: {context}
     Question: {question}"""
 
     return document_retriever, ChatPromptTemplate.from_template(answer_template)

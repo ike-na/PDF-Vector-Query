@@ -5,7 +5,8 @@ This application is a retrieval-augmented generation (RAG) system with a simple 
 # Technology Stack
 
 - **Backend:** Python with Flask
-- **Large Language Model (LLM):** Ollama3:8b
+- **Large Language Model (LLM):** [Ollama3:8b](https://ollama.com/library/llama3:8b)
+- **Framework for LLM:** [LangChain](https://python.langchain.com/v0.2/docs/introduction/)
 - **Database:** Chroma Vectorstore
 - **Frontend:** React with TypeScript
 - **Deployment:** Docker, Kubernetes (optional), AWS Cloud
