@@ -17,7 +17,7 @@ def get_vectorstore(chunks):
     loaded_vectorstore = Chroma(persist_directory="chroma_vector_db",
                               embedding_function=OllamaEmbeddings(model="nomic-embed-text"),
                               collection_name="local-rag" )
-    print("\nFound chroma_vector_db. \n \n Loaded the vectorstore.\n")
+    print("\nFound chroma_vector_db. \n \nLoaded the vectorstore.\n")
     return loaded_vectorstore
   else:
     return save_vectorstore(chunks)
