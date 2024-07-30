@@ -1,4 +1,4 @@
 node_modules
 monopoly.pdf
 chroma_vector_db/
-__pycache__
+__pycache__/
