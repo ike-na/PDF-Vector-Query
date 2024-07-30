@@ -14,3 +14,5 @@ This application is a retrieval-augmented generation (RAG) system with a simple 
 # Learnings
 
 - **Query translation:** Translating the input question in order to improve the retrieval accuracy. This addresses the problem where distance-based similarity search between the query and the documents is affected by ambiguous user input, resulting in poor results.
+
+# Currently working on the front-end!
