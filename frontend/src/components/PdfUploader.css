@@ -1,0 +1,165 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #000000;
+    }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.big-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinning-ball-canvas {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pdf-uploader {
+  position: fixed;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #000;
+  color: #00ff00;
+  padding: 20px;
+  width: 30vw;
+  margin: 0 auto;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  z-index: 1;
+  }
+.pdf-uploader p, 
+.pdf-uploader h2, 
+.pdf-uploader button, 
+.pdf-uploader textarea {
+    color: #00ff00;
+}
+
+@media (max-width: 480px) {
+  .pdf-uploader {
+      width: 95vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .pdf-uploader {
+      width: 90vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .pdf-uploader {
+      width: 70vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pdf-uploader {
+      width: 50vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .pdf-uploader {
+      width: 30vw;
+  }
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  display: inline-block;
+  z-index: 2;
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 16px;
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.file-input-label:hover {
+  background-color: #0f110f;
+  color: #00ff00;
+}
+
+.selected-file {
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+}
+  
+  .upload-button {
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .upload-button:hover {
+    background-color: #003300;
+  }
+  
+  .upload-button:disabled {
+    color: #006600;
+    border-color: #006600;
+    cursor: not-allowed;
+  }
+  
+  .progress-container {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  
+  .progress-bar {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .completion-message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
