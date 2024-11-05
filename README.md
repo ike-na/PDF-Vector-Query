@@ -25,7 +25,7 @@ https://github.com/user-attachments/assets/ee8c443b-e49a-4c7b-a440-bfade151b135
   - _Handles file uploads and data management._
   - _Interacts with Chroma vector database for storage and retrieval._
 - **Large Language Model (LLM):** [Ollama3:8b](https://ollama.com/library/llama3:8b)
-  - _Implements advanced NLP capabilities for document interaction._
+  - _Implements advanced natural language processing (NLP) capabilities for document interaction._
 - **Framework for LLM:** [LangChain](https://python.langchain.com/v0.2/docs/introduction/)
 - **Database:** Chroma Vectorstore
   - _Efficient storage and retrieval of vector data._
@@ -37,12 +37,15 @@ https://github.com/user-attachments/assets/ee8c443b-e49a-4c7b-a440-bfade151b135
 
 - **Query translation:** Translating the input question in order to improve the retrieval accuracy. This addresses the problem where distance-based similarity search between the query and the documents is affected by ambiguous user input, resulting in poor results.
 
-- **Data retrieval:** Learned how to efficiently pull relevant information from a dataset. This includes understanding search algorithms and how they impact the accuracy and speed of retrieving information.
+- **Document embedding:** Converting documents into vector embeddings to represent their semantic content. This enables similarity searches by comparing vectors, allowing the retrieval of contextually related documents.
 
-- **Integrating language models:** Gained skills in working with language models and understanding how to process and generate natural language responses. This involves knowing how to connect the model with user queries to provide meaningful outputs.
+- **Vector databases for LLMs:** Understanding the benefits of using vector databases for storing and querying large language model embeddings. Vector databases enhance retrieval efficiency and accuracy in similarity searches, making them particularly useful in handling high-dimensional data from LLMs.
 
-- **Building APIs:** Enhanced my ability to create RESTful APIs with Flask, handling requests and responses for frontend-backend communication.
+- **Integrating language models:** Gained experience implementing a local LLM as part of a Retrieval-Augmented Generation (RAG) application.
 
-- **Frontend development:** Gained experience in building user interfaces using React and TypeScript. Component design, state management, and creating responsive layouts.
+- **Building APIs:** Improved proficiency in creating RESTful APIs with Flask for smooth frontend-backend communication.
+
+- **Frontend development:** Built user interfaces in React and TypeScript, focusing on component design, state management, and responsive layouts.
+
 
 # Currently working on the Deployment!
