@@ -6,6 +6,18 @@ This application is a retrieval-augmented generation (RAG) system with a simple 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
+
+# How to Use
+Here, I uploaded a Monopoly manual through the web UI and asked the application, "How can I get out of the jail?"
+
+I recorded the videos using `Win + Alt + R`, so the selection process for `monopoly.pdf` in the file explorer isn't visible.
+
+https://github.com/user-attachments/assets/9edad0d2-db73-46f6-83dd-5aa559deec05
+
+https://github.com/user-attachments/assets/09ba0b99-fb9b-4bd5-b605-b7662e0f92f5
+
+https://github.com/user-attachments/assets/ee8c443b-e49a-4c7b-a440-bfade151b135
+
 # Technology Stack
 
 - **Backend:** Python with Flask
