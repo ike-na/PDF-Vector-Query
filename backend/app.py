@@ -45,15 +45,21 @@ def ask_question():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
-@app.route('/api/chroma-vector-db', methods=['DELETE'])
-def delete_chroma_vector_db():
+@app.route('/api/clear-databases', methods=['DELETE'])
+def delete_databases():
     try:
-        db_path = os.path.join(os.getcwd(), 'chroma_vector_db')
-        if os.path.exists(db_path):
-            shutil.rmtree(db_path) 
-            return jsonify({'message': 'Chroma vector DB cleared successfully.'}), 200
-        else:
-            return jsonify({'message': 'Chroma vector DB not found. Propably not cleared.'}), 200
+        folders = ['chroma_vector_db', 'embeddings']
+        for folder in folders:
+            folder_path = os.path.join(os.getcwd(), folder)
+            if os.path.exists(folder_path):
+                for item in os.listdir(folder_path):
+                    item_path = os.path.join(folder_path, item)
+                    if os.path.isfile(item_path) or os.path.islink(item_path):
+                        os.unlink(item_path)
+                    elif os.path.isdir(item_path):
+                        shutil.rmtree(item_path) 
+
+        return jsonify({'message': 'Databases cleared successfully.'}), 200
             
     except Exception as e:
         return jsonify({'error': str(e)}), 500

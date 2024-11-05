@@ -2,6 +2,10 @@
 
 This application is a retrieval-augmented generation (RAG) system with a simple web interface that allows users to upload their PDFs. Once uploaded, the application embeds the documents to a vector database. Users can then interact with the embedded PDFs by making queries, which are processed by a large language model (llama3:8b). This enables users to get answers specific to the content of the documents.
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
 # Technology Stack
 
 - **Backend:** Python with Flask
@@ -27,6 +31,6 @@ This application is a retrieval-augmented generation (RAG) system with a simple 
 
 - **Building APIs:** Enhanced my ability to create RESTful APIs with Flask, handling requests and responses for frontend-backend communication.
 
-- **Frontend development:** Gained experience in building user interfaces using React and TypeScript. Component design, state management, and creating responsive layouts..
+- **Frontend development:** Gained experience in building user interfaces using React and TypeScript. Component design, state management, and creating responsive layouts.
 
 # Currently working on the Deployment!
